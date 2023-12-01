@@ -11,10 +11,10 @@ namespace Тумаков
             
             Console.WriteLine("Упражнение 11.1");
             Console.WriteLine("Программа с фабрикой классов для банковского счёта");
-            Console.WriteLine("\nСоздадим аккаунт");
+            Console.WriteLine("\nСоздаем аккаунт");
             FactoryBank factoryBank = new FactoryBank();
             uint number_1 = factoryBank.CreateAccount(100);
-            uint number_2 = factoryBank.CreateAccount(10000);
+            uint number_2 = factoryBank.CreateAccount(2000);
             uint number_3 = factoryBank.CreateAccount(-1000);
             factoryBank.RemoveAccount(number_1);
             uint[] numbers_1 = new uint[] { number_1, number_2, number_3};
@@ -28,9 +28,9 @@ namespace Тумаков
             Console.WriteLine("Упражнение 11.2");
             Console.WriteLine("Разбить классы связанные с банковским счётом (DLL)");
             FactoryBank_1 factoryBank_1 = new FactoryBank_1();
-            uint number__1 = factoryBank_1.CreateAccount_1(1000);
-            uint number__2 = factoryBank_1.CreateAccount_1(100000);
-            uint number__3 = factoryBank_1.CreateAccount_1(-10000);
+            uint number__1 = factoryBank_1.CreateAccount_1(100);
+            uint number__2 = factoryBank_1.CreateAccount_1(2000);
+            uint number__3 = factoryBank_1.CreateAccount_1(-1000);
             factoryBank_1.RemoveAccount_1(number_1);
             uint[] numbers___1 = new uint[] { number__1, number__2, number__3 };
             Console.WriteLine();
