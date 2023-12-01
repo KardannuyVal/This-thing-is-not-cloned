@@ -12,10 +12,6 @@ namespace Bank_Library
         private uint number = 0;
         private static Hashtable table = new Hashtable(10000);
         public Hashtable table_1 { get { return table; } }
-        /// <summary>
-        /// Перегруженный метод, который добавляет уникальный номер счёта в словарь
-        /// </summary>
-        /// <returns></returns>
         public uint CreateAccount_1()
         {
             number++;
@@ -24,11 +20,6 @@ namespace Bank_Library
             Console.WriteLine($"Аккаунт банковского счёта с номером ({number}) добавлен, вы решили не класть деньги на баланс");
             return number;
         }
-        /// <summary>
-        /// Перегруженный метод, который добавляет уникальный номер счёта в словарь, а также позволяет положить на баланс деньги
-        /// </summary>
-        /// <param name="money"></param>
-        /// <returns></returns>
         public uint CreateAccount_1(double money)
         {
             if (money < 0)
@@ -48,10 +39,6 @@ namespace Bank_Library
                 return number;
             }
         }
-        /// <summary>
-        /// Метод, который удаляет из словаря номер счёта по его уникальному номеру
-        /// </summary>
-        /// <param name="number"></param>
         public void RemoveAccount_1(uint number)
         {
             if (table.ContainsKey(number))
@@ -64,11 +51,6 @@ namespace Bank_Library
                 Console.WriteLine("Данного номера не существует");
             }
         }
-        /// <summary>
-        /// Хеш-таблица
-        /// </summary>
-        /// <param name="numbers"></param>
-
         public void HashTable_1(uint[] numbers)
         {
             for (int i = 0; i < numbers.Length; i++)
