@@ -10,9 +10,9 @@ namespace Тумаков
     }
     internal class Apartment
     {
-        internal static int number;//уникальный номер квартиры
-        internal uint height;// высота здания
-        internal uint floor;//количество этажей
+        internal static int number;
+        internal uint height;
+        internal uint floor;
         internal double heig_floor;
         internal Color color;
         internal Apartment(uint height, uint floor, Color color)
