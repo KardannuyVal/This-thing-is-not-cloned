@@ -17,10 +17,7 @@ namespace Тумаков_12
         {
             this.balance = balance;
         }
-        /// <summary>
-        /// Метод, который позволяет положить на счёт деньги
-        /// </summary>
-        /// <param name="money"></param>
+
         public void GetBalance(double money)
         {
             if (money < 0)
@@ -33,19 +30,10 @@ namespace Тумаков_12
                 Console.WriteLine($"На вашем счёте <{number}> {balance}");
             }
         }
-        /// <summary>
-        /// Переопределённый метод ToString
-        /// </summary>
-        /// <returns></returns>
         public override string ToString()
         {
             return name;
         }
-        /// <summary>
-        /// Переопределённый метод Equals
-        /// </summary>
-        /// <param name="obj"></param>
-        /// <returns></returns>
         public override bool Equals(object obj)
         {
             if (obj == null)
@@ -62,22 +50,11 @@ namespace Тумаков_12
                 return false;
             }
             return name == other.name;
-            //return name.Equals(other.name);
         }
-        /// <summary>
-        /// Переопределённый метод GetHashCode
-        /// </summary>
-        /// <returns></returns>
         public override int GetHashCode()
         {
             return ToString().GetHashCode();
         }
-        /// <summary>
-        /// Переопределённый метод ==
-        /// </summary>
-        /// <param name="bank_1"></param>
-        /// <param name="bank_2"></param>
-        /// <returns></returns>
         
         public static bool operator ==(Bank_account bank_1, Bank_account bank_2)
         {
@@ -94,20 +71,11 @@ namespace Тумаков_12
                 return true;
             }
         }
-        /// <summary>
-        /// Переопределённый метод !=
-        /// </summary>
-        /// <param name="bank_1"></param>
-        /// <param name="bank_2"></param>
-        /// <returns></returns>
+
         public static bool operator !=(Bank_account bank_1, Bank_account bank_2)
         {
             return !(bank_1 == bank_2);
         }
-        /// <summary>
-        /// Метод, который показывает информацию о имени счёта
-        /// </summary>
-        /// <param name="bank_account"></param>
         public void Information(Bank_account bank_account)
         {
             if(name.Equals(bank_account.name) == true)
