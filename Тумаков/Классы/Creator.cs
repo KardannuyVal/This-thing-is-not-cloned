@@ -8,12 +8,6 @@ namespace Тумаков
         private static uint number = 0;
         private static Hashtable table = new Hashtable(10000);
         public Hashtable Table { get { return table; } }
-        /// <summary>
-        /// Перегруженный метод для вычисления высоты этажа. Метод добавляет уникальный номер здания в хеш таблицу
-        /// </summary>
-        /// <param name="heigth"></param>
-        /// <param name="floor"></param>
-        /// <returns></returns>
         public static uint CreateBuild(uint heigth, uint floor)
         {
             number++;
@@ -22,13 +16,6 @@ namespace Тумаков
             apartments.heig_floor = heigth / floor;
             return number;
         }
-        /// <summary>
-        /// Перегруженный метод вычисления высоты этажа и определения цвета здания. Метод добавляет уникальный номер здания в хеш таблицу
-        /// </summary>
-        /// <param name="heigth"></param>
-        /// <param name="floor"></param>
-        /// <param name="color"></param>
-        /// <returns></returns>
         public static uint CreateBuild(uint heigth, uint floor, Color color)
         {
             number++;
@@ -38,10 +25,6 @@ namespace Тумаков
             apartments.color = color;
             return number;
         }
-        /// <summary>
-        /// Метод, который удаляет уникальный номер здания из хеш таблицы
-        /// </summary>
-        /// <param name="number"></param>
         public static void RemoveApartment(uint number)
         {
             if (table.ContainsKey(number))
@@ -54,10 +37,6 @@ namespace Тумаков
                 Console.WriteLine("Данной квартиры не существует");
             }
         }
-        /// <summary>
-        /// хеш-таблица
-        /// </summary>
-        /// <param name="numbers"></param>
         public static void Hash_Table(uint[] numbers)
         {
             for (int i = 0; i < numbers.Length; i++) 
