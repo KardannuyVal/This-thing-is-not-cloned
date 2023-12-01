@@ -7,11 +7,7 @@ namespace Тумаков
     {
         private uint number = 0;
         private static Hashtable table = new Hashtable(10000);
-        public Hashtable table_1 { get { return table; } }
-        /// <summary>
-        /// Перегруженный метод, который добавляет уникальный номер счёта в хеш таблицу
-        /// </summary>
-        /// <returns></returns>
+        public Hashtable table_1 { get { return table; } 
         public uint CreateAccount()
         {
             number++;
@@ -20,11 +16,7 @@ namespace Тумаков
             Console.WriteLine($"Аккаунт банковского счёта с номером ({number}) добавлен, вы решили не класть деньги на баланс");
             return number;
         }
-        /// <summary>
-        /// Перегруженный метод, который добавляет уникальный номер счёта в хеш таблицу, а также позволяет положить на баланс деньги
-        /// </summary>
-        /// <param name="money"></param>
-        /// <returns></returns>
+
         public uint CreateAccount(double money)
         {
             if (money < 0)
@@ -44,10 +36,7 @@ namespace Тумаков
                 return number;
             }
         }
-        /// <summary>
-        /// Метод, который удаляет из хеш таблицы номер счёта по его уникальному номеру
-        /// </summary>
-        /// <param name="number"></param>
+ 
         public void RemoveAccount(uint number)
         {
             if (table.ContainsKey(number))
@@ -60,11 +49,6 @@ namespace Тумаков
                 Console.WriteLine("Данного номера не существует");
             }
         }
-        /// <summary>
-        /// Хеш-таблица
-        /// </summary>
-        /// <param name="numbers"></param>
-
         public void HashTable(uint[] numbers)
         {
             for (int i = 0; i < numbers.Length; i++)
